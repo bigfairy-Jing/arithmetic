@@ -1,0 +1,11 @@
+{
+  "name": "arithmetic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index1.js",
+  "scripts": {
+    "create": "node ./cmd/cmd.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
