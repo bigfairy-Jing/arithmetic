@@ -242,3 +242,56 @@
 * [1,2],  
 * []  
 * ]
+
+
+### [index22.js](./index22.js)
+/**
+ * 1.计算多个区间的交集
+ *   区间用长度为2的数字数组表示，如[2, 5]表示区间2到5（包括2和5）；
+ *   区间不限定方向，如[5, 2]等同于[2, 5]；
+ *   实现`getIntersection 函数`
+ *   可接收多个区间，并返回所有区间的交集（用区间表示），如空集用null表示
+ * 示例：
+ *   getIntersection([5, 2], [4, 9], [3, 6]); * [4, 5]
+ *   getIntersection([1, 7], [8, 9]); * null
+ */  
+* [4, 5]  
+* null
+
+
+### [index23.js](./index23.js)
+*  DOM 的体积过大会影响页面性能，假如你想在用户关闭页面时统计（计算并反馈给服务器）  
+*  当前页面中元素节点的数量总和、元素节点的最大嵌套深度以及最大子元素个数，请用 JS 配合  
+*  原生 DOM API 实现该需求（不用考虑陈旧浏览器以及在现代浏览器中的兼容性，可以使用任意  
+*  浏览器的最新特性；不用考虑 shadow DOM）。比如在如下页面中运行后：
+
+
+### [index24.js](./index24.js)
+* 3.请使用原生代码实现一个Events模块，可以实现自定义事件的订阅、触发、移除功能  
+* const fn1 = (... args)=>console.log('I want sleep1', ... args)  
+* const fn2 = (... args)=>console.log('I want sleep2', ... args)  
+* const event = new Events();  
+* event.on('sleep', fn1, 1, 2, 3);  
+* event.on('sleep', fn2, 1, 2, 3);  
+* event.fire('sleep', 4, 5, 6);  
+* * I want sleep1 1 2 3 4 5 6  
+* * I want sleep2 1 2 3 4 5 6  
+* event.off('sleep', fn1);  
+* event.once('sleep', ()=>console.log('I want sleep));  
+* event.fire('sleep');
+
+
+### [index25.js](./index25.js)
+* 桌上有 n 堆力扣币，每堆的数量保存在数组 coins 中。我们每次可以选择任意一堆，拿走其中的一枚或者两枚，求拿完所有力扣币的最少次数。  
+* 示例 1：  
+* 输入：[4,2,1]  
+* 输出：4  
+* 解释：第一堆力扣币最少需要拿 2 次，第二堆最少需要拿 1 次，第三堆最少需要拿 1 次，总共 4 次即可拿完。  
+* 复制代码  
+* 示例 2：  
+* 输入：[2,3,10]  
+* 输出：8  
+* 复制代码  
+* 限制：  
+* 1 <= n <= 4  
+* 1 <= coins[i] <= 10
