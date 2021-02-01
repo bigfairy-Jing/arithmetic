@@ -23,3 +23,22 @@
 
 // 提示：你可以假设 k 总是有效的，在输入数组不为空的情况下，1 ≤ k ≤ 输入数组的大小。
 
+const maxSlid = (nums, k) => {
+  const len = nums.length
+  const res = []
+  const deque = []
+
+  for (let i = 0; i < len; i++) {
+    while (deque.length && nums[deque[deque.length - 1]] < nums[i]) {
+      deque.pop()
+    }
+    deque.push(i)
+    while (deque.length && deque[0] <= i-k) {
+      deque.shift()
+    }
+    if(i >= k -1) res.push(nums[deque[0]])
+  }
+  return res
+}
+
+console.log(maxSlid([1,3,-1,-3,5,3,6,7], 3))
